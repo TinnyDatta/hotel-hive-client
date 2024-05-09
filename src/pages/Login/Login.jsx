@@ -6,7 +6,8 @@ import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 // import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
-// import SocialLogin from "../SocialLogin/SocialLogin";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
+
 
 const Login = () => {
 
@@ -97,7 +98,7 @@ const Login = () => {
               </div>
               
             </form>
-            {/* <SocialLogin></SocialLogin> */}
+            <SocialLogin></SocialLogin>
            
           </div>
         </div>
