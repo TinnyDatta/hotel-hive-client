@@ -29,7 +29,7 @@ const SocialLogin = () => {
                 <button
               onClick={()=>handleSocialLogin(googleLogin)}
              
-                className="btn bg-purple-300">Google</button>
+                className="btn bg-[#FFE4B5]">Google</button>
                 
               </div>
         </div>

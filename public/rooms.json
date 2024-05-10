@@ -1,0 +1,83 @@
+[
+    {
+        "room_name": "Deluxe Suite",
+        "room_description": "Deluxe Suite with Ocean View",
+        "price_per_night": 250,
+        "room_size": "45m²",
+        "availability": "yes",
+        "room_image": "https://i.ibb.co/p1R6btg/solMain.jpg",
+        "special_offers": "Stay 3 nights, get 1 night free"
+    },
+    {
+        "room_name": "Standard Room",
+        "room_description": "Standard Room with Garden View",
+        "price_per_night": 120,
+        "room_size": "30m²",
+        "availability": "yes",
+        "room_image": "https://i.ibb.co/SPp1thb/hotel-kabayan-pasay-20240405194642775900.jpg",
+        "special_offers": "10% discount for weekend stays"
+    },
+    {
+        "room_name": "Penthouse Suite",
+        "room_description": "Penthouse with Private Terrace",
+        "price_per_night": 450,
+        "room_size": "75m²",
+        "availability": "no",
+        "room_image": "https://i.ibb.co/d5WHvj7/3e09f65c1749-33-living-room-bar-min.jpg",
+        "special_offers": "No special offer"
+    },
+    {
+        "room_name": "Family Room",
+        "room_description": "Family Room with Bunk Beds",
+        "price_per_night": 180,
+        "room_size": "50m²",
+        "availability": "yes",
+        "room_image": "https://i.ibb.co/pfk60Kv/d6f6c914ea78c202eeb69dec4059e328.jpg",
+        "special_offers": "Free breakfast for children under 12"
+    },
+    {
+        "room_name": "Executive Room",
+        "room_description": "Executive Room with Lounge Access",
+        "price_per_night": 320,
+        "room_size": "40m²",
+        "availability": "no",
+        "room_image": "https://i.ibb.co/zZPWBKq/PHW-5248.jpg",
+        "special_offers": "Complimentary airport transfer"
+    },
+    {
+        "room_name": "Single Room",
+        "room_description": "Single Room with City View",
+        "price_per_night": 90,
+        "room_size": "20m²",
+        "availability": "yes",
+        "room_image": "https://i.ibb.co/WyyhJzF/single-room.jpg",
+        "special_offers": "Early check-in available"
+    },
+    {
+        "room_name": "Superior Room",
+        "room_description": "Superior Room with Balcony",
+        "price_per_night": 200,
+        "room_size": "35m²",
+        "availability": "yes",
+        "room_image": "https://i.ibb.co/rmBkVFr/expediav2-57035-b38da8-786051.jpg",
+        "special_offers": "No special offer"
+    },
+    {
+        "room_name": "Honeymoon Suite",
+        "room_description": "Honeymoon Suite with Jacuzzi",
+        "price_per_night": 380,
+        "room_size": "55m²",
+        "availability": "no",
+        "room_image": "https://i.ibb.co/J7gv9L2/4e2bbe10fa794d5ce8de003d1075c4ad.jpg",
+        "special_offers": "Champagne on arrival"
+    },
+    {
+        "room_name": "Twin Room",
+        "room_description": "Twin Room with Shared Bathroom",
+        "price_per_night": 60,
+        "room_size": "25m²",
+        "availability": "yes",
+        "room_image": "https://i.ibb.co/Pm8HqLn/1b45d912d4c0c87adccd816d5196d3e8.jpg",
+        "special_offers": "No special offer"
+    }
+]

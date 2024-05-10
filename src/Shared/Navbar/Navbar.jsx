@@ -1,17 +1,19 @@
+
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
+
 const Navbar = () => {
-  const {user, logout} = useContext(AuthContext)
+ const {user, logout} = useContext(AuthContext)
  
     const navLinks = <>
     <li><NavLink to='/' className={({isActive}) => isActive? ' text-[#E9967A]  border border-[#FFE4B5] p-2' : ''}>Home</NavLink></li>
-    <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/allTouristsSpot'>Rooms</NavLink></li> 
+    <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/rooms'>Rooms</NavLink></li> 
     {
       user && <>
-      <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/addTouristsSpot'>My Bookings</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/bookings'>My Bookings</NavLink></li>
       </>
     }
     
