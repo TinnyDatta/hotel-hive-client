@@ -1,16 +1,23 @@
 
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 const RoomDetails = () => {
+  const {user} = useContext(AuthContext);
 const id = useParams();
 console.log(id)
 
+const [startDate, setStartDate] = useState(new Date());
   const [room, setRoom] = useState({});
+
 useEffect(() => {
 fetch(`http://localhost:5000/singleRoom/${id.id}`)
 .then(res => res.json())
@@ -25,6 +32,16 @@ fetch(`http://localhost:5000/singleRoom/${id.id}`)
     Aos.init({duration: 2000});
   },[]);
 
+  const handleDate = e => {
+    e.preventDefault();
+    const deadline = startDate
+    const email = user?.email
+    
+
+const info = {email, deadline};
+console.log(info)
+
+  }
 
   return (
   <div>
@@ -40,7 +57,7 @@ fetch(`http://localhost:5000/singleRoom/${id.id}`)
     </div>
   </div>
 </div>
-    <div className="hero sm[900px] md:[600px] lg:h-[600px] rounded-xl mt-6">
+<div className="hero sm[900px] md:[600px] lg:h-[600px] rounded-xl mt-6">
       <div className="hero-content flex flex-col md:flex-row-reverse lg:flex-row-reverse gap-10 lg:gap-20 rounded-lg bg-purple-100 ">
        <div> <img className="rounded-lg shadow-2xl w-[400px] h-[520px] mr- ml-1" src={room.room_image}  /></div>
         <div className="space-y-4 text-red-50 rounded-2xl w-[400px] lg:w-[600px] h-[600px] lg:h-[520px] bg-purple-300 ml-4 p-4">
@@ -52,9 +69,25 @@ fetch(`http://localhost:5000/singleRoom/${id.id}`)
           <p  className="text-lg font-semibold">Availability: {room.availability}   </p>
          <p  className="text-lg font-semibold"> Special Offer : {room.special_offers}  </p>
         
-          <div>
-          <button className=' rounded-xl bg-purple-400 py-2 px-3'>Book Now</button>
-          </div>
+          
+         {/* <div> <button className=' rounded-xl bg-purple-400 py-2 px-3'>Book Now</button></div> */}
+         <div>
+          <form onSubmit={handleDate} >
+          <div className="form-control">
+          <label className="label">
+            <span className="label-text text-xl font-semibold text-white">Booking Date</span>
+          </label>
+          <DatePicker
+          className='border p-1 rounded-lg text-black'
+           selected={startDate} onChange={(date) => setStartDate(date)} />
+          {/* <input type="number" placeholder="booking date" className="p-1 rounded-lg w-1/3"  /> */}
+          <button
+          className=' rounded-xl bg-purple-400 py-2 px-3 w-1/4'>Book Now</button>
+        </div>
+       
+          </form>
+         </div>
+          
          
         </div>
       </div>
