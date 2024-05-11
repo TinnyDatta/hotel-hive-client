@@ -5,6 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import DatePicker from "react-datepicker";
+import Swal from 'sweetalert2'
 
 import "react-datepicker/dist/react-datepicker.css";
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -27,7 +28,7 @@ fetch(`http://localhost:5000/singleRoom/${id.id}`)
 })
 },[id])
   
-
+const {availability, price_per_night, room_description, room_image, room_name, room_size, special_offers } = room
   useEffect(()=> {
     Aos.init({duration: 2000});
   },[]);
@@ -38,8 +39,28 @@ fetch(`http://localhost:5000/singleRoom/${id.id}`)
     const email = user?.email
     
 
-const info = {email, deadline};
+const info = {email, deadline, availability, price_per_night, room_description, room_image, room_name, room_size, special_offers};
 console.log(info)
+
+  fetch('http://localhost:5000/addings', {
+    method : 'POST',
+    headers : {
+     'content-type' : 'application/json'
+    },
+    body : JSON.stringify(info)
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+    if(data.insertedId){
+      Swal.fire({
+        title: 'Success!',
+        text: 'Booked a room successfully',
+        icon: 'success',
+        confirmButtonText: 'Cool'
+      })
+    }
+  })
 
   }
 
