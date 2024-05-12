@@ -89,9 +89,6 @@ console.log(info)
           
           <p  className="text-lg font-semibold">Availability: {room.availability}   </p>
          <p  className="text-lg font-semibold"> Special Offer : {room.special_offers}  </p>
-        
-          
-         {/* <div> <button className=' rounded-xl bg-purple-400 py-2 px-3'>Book Now</button></div> */}
          <div>
           <form onSubmit={handleDate} >
           <div className="form-control">
@@ -101,7 +98,6 @@ console.log(info)
           <DatePicker
           className='border p-1 rounded-lg text-black'
            selected={startDate} onChange={(date) => setStartDate(date)} />
-          {/* <input type="number" placeholder="booking date" className="p-1 rounded-lg w-1/3"  /> */}
           <button
           className=' rounded-xl bg-purple-400 py-2 px-3 w-1/4'>Book Now</button>
         </div>

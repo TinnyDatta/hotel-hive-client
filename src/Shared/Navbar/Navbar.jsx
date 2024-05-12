@@ -13,7 +13,7 @@ const Navbar = () => {
     <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/rooms'>Rooms</NavLink></li> 
     {
       user && <>
-      <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/bookings'>My Bookings</NavLink></li>
+      <li><NavLink className={({isActive}) => isActive? ' border p-2 border-[#FFE4B5] text-[#E9967A]' : ''} to='/myBookings'>My Bookings</NavLink></li>
       </>
     }
     
