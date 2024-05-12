@@ -99,7 +99,7 @@ console.log(info)
           className='border p-1 rounded-lg text-black'
            selected={startDate} onChange={(date) => setStartDate(date)} />
           <button
-          className=' rounded-xl bg-purple-400 py-2 px-3 w-1/4'>Book Now</button>
+          className=' rounded-xl bg-purple-400 py-2 px-3 w-1/4 mt-2'>Book Now</button>
         </div>
        
           </form>

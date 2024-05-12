@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyBookings = () => {
     const {user} = useContext(AuthContext);
@@ -96,7 +97,9 @@ const MyBookings = () => {
           
         </th>
         <th>
+          <Link to={`/update/${booking._id}`}>
           <button className="btn btn-ghost btn-xs bg-green-400">Update date</button>
+          </Link>
           
         </th>
       </tr>
