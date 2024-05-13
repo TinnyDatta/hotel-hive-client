@@ -55,7 +55,7 @@ const MyBookings = () => {
           <Helmet>
             <title>HotelHive | My Bookings </title>
            </Helmet>
-            <h2 className="text-2xl font-semibold text-center"> My Booking</h2>
+            <h2 className="text-2xl font-semibold text-center my-10"> My Booking</h2>
             <div className="overflow-x-auto">
   <table className="table text-2xl">
     {/* head */}
