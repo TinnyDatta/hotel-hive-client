@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const MyBookings = () => {
     const {user} = useContext(AuthContext);
@@ -51,6 +52,9 @@ const MyBookings = () => {
 
     return (
         <div>
+          <Helmet>
+            <title>HotelHive | My Bookings </title>
+           </Helmet>
             <h2 className="text-2xl font-semibold text-center"> My Booking</h2>
             <div className="overflow-x-auto">
   <table className="table">
