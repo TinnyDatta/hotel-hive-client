@@ -40,11 +40,10 @@ const Login = () => {
       if(result.user){
         updateUserProfile(name, photo)
       .then(()=> {
-
-        setUser((user)=>({
+        // setUser((user)=>({
           
-          ...user, displayName:name, photoURL: photo 
-         }))
+        //   ...user, displayName:name, photoURL: photo 
+        //  }))
          
         navigate(location?.state || '/')
       })

@@ -1,11 +1,35 @@
-import { Link, useLoaderData } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Rooms = () => {
 
-const bookings = useLoaderData();
+// const bookings = useLoaderData();
+const [bookings, setBookings] = useState([]);
+// const [filter, setFilter] = useState('');
+
+useEffect(() => {
+  fetch('http://localhost:5000/bookings')
+  .then(res => res.json())
+  .then(data => {
+    setBookings(data)
+  })
+},[])
 
     return (
         <div className="max-w-6xl mx-auto mb-10">
+          <div className="text-center my-8">
+          {/* <select 
+          onChange={e => setFilter(e.target.value) }
+          value={filter}
+          name='category'
+          id='category'
+          >
+            <option value='' >Filter By Price</option>
+            <option value='$0-$200'>$0-$200 </option>
+            <option value='$200-$300'>$200-$300</option>
+            <option value='$300-$500'>$300-$500</option>
+          </select> */}
+          </div>
             <h2 className="text-3xl text-[#E9967A] text-center my-10">Available Rooms</h2>
              <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
              {
@@ -18,6 +42,7 @@ const bookings = useLoaderData();
   <div className="card-body">
     <h2 className="card-title font-bold text-[#E9967A]">{booking.room_name}</h2>
     <p className="font-light text-xl">{booking.room_description}</p>
+    <p className="font-light text-xl">Price Per Night : {'$'+booking.price_per_night}</p>
     
   </div>
 </Link>

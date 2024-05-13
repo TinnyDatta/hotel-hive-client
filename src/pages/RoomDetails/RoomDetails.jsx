@@ -69,15 +69,7 @@ console.log(info)
      <Helmet>
             <title>HotelHive | Booking Details </title>
            </Helmet>
-           <div  data-aos = "zoom-in" className="hero h-[500px] rounded-3xl my-8" style={{backgroundImage: 'url(../images/detailsBanner.jpg)'}}>
-  <div className="hero-overlay bg-opacity-60 rounded-3xl"></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
-      <h1 className="mb-5 text-5xl text-white font-bold">Explore to show Details</h1>
-      <p className="mb-5">If you are feel interested in any rooms, you can learn detailed information from here. </p>
-    </div>
-  </div>
-</div>
+        <h2 className="text-2xl font-semibold text-center">Room Details</h2>
 <div className="hero sm[900px] md:[600px] lg:h-[600px] rounded-xl mt-6">
       <div className="hero-content flex flex-col md:flex-row-reverse lg:flex-row-reverse gap-10 lg:gap-20 rounded-lg bg-purple-100 ">
        <div> <img className="rounded-lg shadow-2xl w-[400px] h-[520px] mr- ml-1" src={room.room_image}  /></div>

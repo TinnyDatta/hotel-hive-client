@@ -34,11 +34,13 @@ import UpdateBooking from "../UpdateBooking/UpdateBooking";
         {
           path: '/rooms',
           element: <Rooms></Rooms>,
-          loader: () => fetch('http://localhost:5000/bookings') 
+          // loader: () => fetch('http://localhost:5000/bookings') 
         },
         {
           path: '/roomDetails/:id',
-          element: <RoomDetails></RoomDetails>
+          element: <PrivateRoute>
+            <RoomDetails></RoomDetails>
+          </PrivateRoute>
         },
         {
           path: '/update/:id',

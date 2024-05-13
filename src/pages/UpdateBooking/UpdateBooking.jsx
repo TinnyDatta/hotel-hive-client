@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 const UpdateBooking = () => {
     const booked = useLoaderData();
     const [startDate, setStartDate] = useState(new Date());
-    const {_id, deadline, room_image, room_name,} = booked;
+    const {_id, room_image, room_name,} = booked;
 
     const handleDate = e => {
         e.preventDefault();
@@ -65,7 +65,7 @@ const UpdateBooking = () => {
             <span className="label-text text-xl font-semibold text-white">Booking Date</span>
           </label>
           <DatePicker
-          className='border p-1 rounded-lg text-black'
+          className='border p-1 rounded-lg text-black' 
            selected={startDate} onChange={(date) => setStartDate(date)} />
           <button
           className=' rounded-xl bg-purple-400 py-2 px-3 w-1/4 mt-2'>Update Date</button>
