@@ -69,7 +69,7 @@ console.log(info)
      <Helmet>
             <title>HotelHive | Booking Details </title>
            </Helmet>
-        <h2 className="text-2xl font-semibold text-center">Room Details</h2>
+        <h2 className="text-2xl text-[#E9967A] font-semibold text-center">Room Details</h2>
 <div className="hero sm[900px] md:[600px] lg:h-[600px] rounded-xl mt-6">
       <div className="hero-content flex flex-col md:flex-row-reverse lg:flex-row-reverse gap-10 lg:gap-20 rounded-lg bg-purple-100 ">
        <div> <img className="rounded-lg shadow-2xl w-[400px] h-[520px] mr- ml-1" src={room.room_image}  /></div>
