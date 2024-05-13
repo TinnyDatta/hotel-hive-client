@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const Rooms = () => {
@@ -17,6 +18,10 @@ useEffect(() => {
 
     return (
         <div className="max-w-6xl mx-auto mb-10">
+          <Helmet>
+            <title>HotelHive | Rooms </title>
+           </Helmet>
+          <div >
           <div className="text-center my-8">
           {/* <select 
           onChange={e => setFilter(e.target.value) }
@@ -49,6 +54,7 @@ useEffect(() => {
             ))
            }
              </div>
+        </div>
         </div>
     );
 };
