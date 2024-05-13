@@ -15,7 +15,7 @@ const FeaturedRoom = () => {
 
     return (
         <div className="my-10">
-            <h2 className="text-2xl font-semibold text-center">Featured Books</h2>
+            <h2 className="text-2xl font-semibold text-center my-10">Featured Books</h2>
     <div className=" grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     {
       features?.map((feature) => (
