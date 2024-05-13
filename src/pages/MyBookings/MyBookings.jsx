@@ -60,7 +60,7 @@ const MyBookings = () => {
   <table className="table text-2xl">
     {/* head */}
     <thead>
-      <tr>
+      <tr className="text-xl">
         <th>Image</th>
         <th>Room Name</th>
         <th>Price Per Night</th>
