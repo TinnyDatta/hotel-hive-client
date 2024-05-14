@@ -1,8 +1,11 @@
-# React + Vite
+# Hotel Hive
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
 
-Currently, two official plugins are available:
+**Room Listing**: View a list of available rooms with details.
+**Booking Functionality**: Book a room for a specific date and time.
+**User Authentication**: Sign up and log in to manage your bookings.
+**Booking Management**: View and cancel existing bookings.
+**Responsive Design**: Optimized for both desktop and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Hotel-Hive Live Link]( https://boisterous-strudel-2d14a7.netlify.app/)
