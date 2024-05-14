@@ -47,8 +47,8 @@ const UpdateBooking = () => {
      <Helmet>
             <title>HotelHive | Update Booking  </title>
            </Helmet>
-<div className="hero sm[900px] md:[600px] lg:h-[600px] lg:mb-40 rounded-xl mt-6">
-      <div className="hero-content flex flex-col md:flex-col lg:flex-col gap-10 lg:gap-10 rounded-lg bg-purple-100 ">
+<div className="hero sm[900px] md:[600px] lg:h-[600px] rounded-xl mt-6">
+      <div className="hero-content flex flex-col md:flex-col lg:flex-col gap-10 lg:gap-10 rounded-lg bg-purple-100 mb-32">
        <div> <img className="rounded-lg shadow-2xl w-[400px] h-[520px] mr- ml-1" src={room_image}  /></div>
         <div className="space-y-4 text-red-50 rounded-2xl w-[400px] lg:w-[600px] h-[600px] lg:h-[220px] bg-purple-300 ml-4 p-4">
           <h1 className="text-3xl font-semibold">{room_name}</h1>
