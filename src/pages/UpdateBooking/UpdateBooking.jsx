@@ -16,9 +16,9 @@ const UpdateBooking = () => {
         
     
     const UpdateInfo = {deadline, room_image, room_name};
-    console.log(UpdateInfo)
+    // console.log(UpdateInfo)
     
-      fetch(`http://localhost:5000/addings/${_id}`, {
+      fetch(`https://hotel-hive-server-ten.vercel.app/addings/${_id}`, {
         method : 'PUT',
         headers : {
          'content-type' : 'application/json'
@@ -27,7 +27,7 @@ const UpdateBooking = () => {
       })
       .then(res => res.json())
       .then(data => {
-        console.log(data)
+        // console.log(data)
         if(data.modifiedCount > 0){
           Swal.fire({
             title: 'Success!',
@@ -42,7 +42,7 @@ const UpdateBooking = () => {
 
     return (
         <div>
-            <h2 className="text-3xl text-[#E9967A] text-center my-10">Update Booking Date</h2>
+            <h2 className="text-3xl text-[#E9967A] text-center mt-10 mb-20">Update Booking Date</h2>
             <div>
      <Helmet>
             <title>HotelHive | Update Booking  </title>
@@ -52,12 +52,6 @@ const UpdateBooking = () => {
        <div> <img className="rounded-lg shadow-2xl w-[400px] h-[520px] mr- ml-1" src={room_image}  /></div>
         <div className="space-y-4 text-red-50 rounded-2xl w-[400px] lg:w-[600px] h-[600px] lg:h-[220px] bg-purple-300 ml-4 p-4">
           <h1 className="text-3xl font-semibold">{room_name}</h1>
-          {/* <h1 className="text-3xl">{room.room_description}</h1> */}
-          {/* <h1 className="text-xl font-semibold  flex flex-row items-center gap-2">Room Size : {room.room_size}</h1> */}
-          {/* <p className="py-3 font-semibold text-xl">Price Per Night : $ {room.price_per_night}</p>
-          
-          <p  className="text-lg font-semibold">Availability: {room.availability}   </p>
-         <p  className="text-lg font-semibold"> Special Offer : {room.special_offers}  </p> */}
          <div>
           <form onSubmit={handleDate} >
           <div className="form-control">

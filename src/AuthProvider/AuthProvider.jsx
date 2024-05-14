@@ -11,7 +11,7 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    console.log(user)
+    // console.log(user)
 
     // user creation
     const createUser = (email, password) => {
@@ -51,7 +51,7 @@ const AuthProvider = ({children}) => {
         const unSubscribe = onAuthStateChanged(auth, (user) => {
             const userEmail = user?.email || user?.email;
             const loggedUser = {email: userEmail}
-         console.log(user)
+        //  console.log(user)
              if (user) {
                setUser(user);
                }
@@ -59,18 +59,18 @@ const AuthProvider = ({children}) => {
             //  token
              if(user){
                 
-              axios.post('http://localhost:5000/jwt',loggedUser, {withCredentials : true})
-              .then(res => {
-                console.log('token response',res.data);
-              })
+              axios.post('https://hotel-hive-server-ten.vercel.app/jwt',loggedUser, {withCredentials : true})
+            //   .then(res => {
+            //     console.log('token response',res.data);
+            //   })
              }
              else{
-              axios.post('http://localhost:5000/logout', loggedUser, {
+              axios.post('https://hotel-hive-server-ten.vercel.app/logout', loggedUser, {
                 withCredentials: true
               })
-              .then(res=> {
-                console.log(res.data)
-              })
+            //   .then(res=> {
+            //     console.log(res.data)
+            //   })
              }
            });
            return () => {

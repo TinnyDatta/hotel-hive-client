@@ -10,7 +10,7 @@ const MyBookings = () => {
     const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/myBooking/${user?.email}`, {credentials: 'include'})
+    fetch(`https://hotel-hive-server-ten.vercel.app/myBooking/${user?.email}`, {credentials: 'include'})
     .then(res => res.json())
     .then(data => {
       setBookings(data)
@@ -28,7 +28,7 @@ const MyBookings = () => {
       confirmButtonText: "Yes, delete it!"
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://hotel-hive-server-ten.vercel.app/delete/${id}`, {
       method : "DELETE",
     })
     .then(res => res.json())

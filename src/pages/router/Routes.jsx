@@ -34,7 +34,7 @@ import UpdateBooking from "../UpdateBooking/UpdateBooking";
         {
           path: '/rooms',
           element: <Rooms></Rooms>,
-          // loader: () => fetch('http://localhost:5000/bookings') 
+          // loader: () => fetch('https://hotel-hive-server-ten.vercel.app/bookings') 
         },
         {
           path: '/roomDetails/:id',
@@ -45,7 +45,7 @@ import UpdateBooking from "../UpdateBooking/UpdateBooking";
         {
           path: '/update/:id',
           element: <UpdateBooking></UpdateBooking>,
-          loader : ({params}) => fetch(`http://localhost:5000/addings/${params.id}`)
+          loader : ({params}) => fetch(`https://hotel-hive-server-ten.vercel.app/addings/${params.id}`)
         },
         {
           path : '/myBookings',

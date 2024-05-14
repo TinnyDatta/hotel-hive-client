@@ -14,17 +14,17 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const RoomDetails = () => {
   const {user} = useContext(AuthContext);
 const id = useParams();
-console.log(id)
+// console.log(id)
 
 const [startDate, setStartDate] = useState(new Date());
   const [room, setRoom] = useState({});
 
 useEffect(() => {
-fetch(`http://localhost:5000/singleRoom/${id.id}`)
+fetch(`https://hotel-hive-server-ten.vercel.app/singleRoom/${id.id}`)
 .then(res => res.json())
 .then(data => {
     setRoom(data)
-    console.log(data)
+    // console.log(data)
 })
 },[id])
   
@@ -40,9 +40,9 @@ const {availability, price_per_night, room_description, room_image, room_name, r
     
 
 const info = {email, deadline, availability, price_per_night, room_description, room_image, room_name, room_size, special_offers};
-console.log(info)
+// console.log(info)
 
-  fetch('http://localhost:5000/addings', {
+  fetch('https://hotel-hive-server-ten.vercel.app/addings', {
     method : 'POST',
     headers : {
      'content-type' : 'application/json'
@@ -51,7 +51,7 @@ console.log(info)
   })
   .then(res => res.json())
   .then(data => {
-    console.log(data)
+    // console.log(data)
     if(data.insertedId){
       Swal.fire({
         title: 'Success!',

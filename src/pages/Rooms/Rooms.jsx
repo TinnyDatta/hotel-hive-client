@@ -9,7 +9,7 @@ const [bookings, setBookings] = useState([]);
 // const [filter, setFilter] = useState('');
 
 useEffect(() => {
-  fetch('http://localhost:5000/bookings')
+  fetch('https://hotel-hive-server-ten.vercel.app/bookings')
   .then(res => res.json())
   .then(data => {
     setBookings(data)
