@@ -14,3 +14,7 @@
 <li>git clone</li>
 <li>npm i</li>
 <li>npm run dev</li>
+
+##Technologies
+<li>Online booking</li>
+<li>See location</li>
