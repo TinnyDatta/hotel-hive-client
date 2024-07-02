@@ -9,3 +9,8 @@
 **Responsive Design**: Optimized for both desktop and mobile devices.
 
 [Hotel-Hive Live Link]( https://boisterous-strudel-2d14a7.netlify.app/)
+
+## 3 steps to clone the project
+<li>git clone</li>
+<li>npm i</li>
+<li>npm run dev</li>
