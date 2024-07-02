@@ -1,5 +1,8 @@
 # Hotel Hive
 
+##Overview
+When we plan any trip or vacation, then we will need some hotel room for staying. Hotel Hive is a website by which one can find suitable hotel room. One can book room and remain tension free for staying. Also there are rooms for all price ranges. It will be very helpful for choosing a comfortable room.
+
 ## Features
 
 **1. Room Listing**: View a list of available rooms with details.<br>
