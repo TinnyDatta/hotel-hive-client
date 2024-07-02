@@ -15,8 +15,6 @@
 <li>npm i</li>
 <li>npm run dev</li>
 
-
-##Technologies
-
+## Technologies
 <li>Online booking</li>
 <li>See location</li>
